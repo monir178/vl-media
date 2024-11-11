@@ -39,7 +39,9 @@ const FloatingPhones = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute top-1/3 left-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10"></div>
+      <div className="absolute top-1/2 right-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
       <div className="text-center">
         <h1 className="text-gray-300 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight">
           <span>Videos</span>{" "}
@@ -58,7 +60,7 @@ const FloatingPhones = () => {
         {mockupData.map((mockup, index) => (
           <div
             key={index}
-            className="absolute w-[150px] border-2 border-blue-900   h-[300px] rounded-2xl overflow-hidden bg-gray-800 shadow-xl shadow-blue-500/40 flex items-center justify-center"
+            className="absolute  w-[150px]   bg-gradient-to-tr from-purple-400 to-blue-400   h-[300px] rounded-2xl overflow-hidden p-[2px]  shadow-xl shadow-blue-500/40 flex items-center justify-center"
             style={{
               transform: `translate(${mockup.x}px, ${mockup.y}px) rotate(${mockup.rotate}deg)`,
             }}>
@@ -67,7 +69,7 @@ const FloatingPhones = () => {
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              className="rounded-xl w-full h-full object-cover"
             />
             <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
           </div>
@@ -76,11 +78,11 @@ const FloatingPhones = () => {
 
       <motion.div
         animate={floatVariants.animate}
-        className="relative  h-[500px] flex sm:hidden justify-center items-center">
+        className="relative  h-[500px]  flex sm:hidden justify-center items-center">
         {mockupDataForMobile.map((mockup, index) => (
           <div
             key={index}
-            className="absolute w-[100px] border-2 border-blue-900   h-[200px] rounded-2xl overflow-hidden bg-gray-800 shadow-xl shadow-blue-500/40 flex items-center justify-center"
+            className="absolute w-[100px]  bg-gradient-to-tr from-purple-400 to-blue-400    h-[200px] rounded-2xl overflow-hidden p-[2px]  shadow-xl shadow-blue-500/40 flex items-center justify-center"
             style={{
               transform: `translate(${mockup.x}px, ${mockup.y}px) rotate(${mockup.rotate}deg)`,
             }}>
@@ -89,7 +91,7 @@ const FloatingPhones = () => {
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              className="rounded-xl w-full h-full object-cover"
             />
             <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
           </div>
@@ -97,11 +99,11 @@ const FloatingPhones = () => {
       </motion.div>
       <motion.div
         animate={floatVariants.animate}
-        className="relative  h-full flex sm:hidden justify-center items-center">
+        className="relative  h-full flex  sm:hidden justify-center items-center">
         {mockupForMobileSecond.map((mockup, index) => (
           <div
             key={index}
-            className="absolute w-[100px] border-2 border-blue-900   h-[200px] rounded-2xl overflow-hidden bg-gray-800 shadow-xl shadow-blue-500/40 flex items-center justify-center"
+            className="absolute w-[100px]  bg-gradient-to-tr from-purple-400 to-blue-400    h-[200px] rounded-2xl overflow-hidden p-[2px]  shadow-xl shadow-blue-500/40 flex items-center justify-center"
             style={{
               transform: `translate(${mockup.x}px, ${mockup.y}px) rotate(${mockup.rotate}deg)`,
             }}>
@@ -110,7 +112,7 @@ const FloatingPhones = () => {
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              className="rounded-xl w-full h-full object-cover"
             />
             <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
           </div>
@@ -122,7 +124,7 @@ const FloatingPhones = () => {
         {mockupDataForTablet.map((mockup, index) => (
           <div
             key={index}
-            className="absolute w-[100px] border-2 border-blue-900   h-[200px] rounded-2xl overflow-hidden bg-gray-800 shadow-xl shadow-blue-500/40 flex items-center justify-center"
+            className="absolute w-[100px]   bg-gradient-to-tr from-purple-400 to-blue-400   h-[200px] rounded-2xl overflow-hidden p-[2px]  shadow-xl shadow-blue-500/40 flex items-center justify-center"
             style={{
               transform: `translate(${mockup.x}px, ${mockup.y}px) rotate(${mockup.rotate}deg)`,
             }}>
@@ -131,7 +133,7 @@ const FloatingPhones = () => {
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              className="rounded-xl w-full h-full object-cover"
             />
             <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
           </div>
