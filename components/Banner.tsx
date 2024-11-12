@@ -66,7 +66,7 @@ const Banner = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="rounded-3xl shadow-[0px_0px_100px_3px_rgba(59,130,246,0.4)] w-full max-w-4xl h-[200px] md:h-[350px] lg:h-[500px] mx-auto"
+              className="rounded-3xl shadow-[0px_0px_100px_3px_rgba(59,130,246,0.4)] w-full md:w-[600px]  lg:w-[900px] h-[200px] md:h-[350px] lg:h-[500px] mx-auto"
               src="https://www.youtube.com/embed/cHBqwj0Ed_I"
               title="copyright free nature videos | No copyright video nature | Download copyright free nature video"
               frameBorder="0"

@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const FloatingPhones = () => {
   const mockupData = [
@@ -29,7 +32,7 @@ const FloatingPhones = () => {
 
   const floatVariants = {
     animate: {
-      y: [0, -20, 0],
+      y: [0, -12, 0],
       transition: {
         duration: 3,
         ease: "easeInOut",
@@ -38,8 +41,16 @@ const FloatingPhones = () => {
     },
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="relative">
+    <div data-aos="fade-up" className="relative pt-12">
       <div className="absolute top-1/3 left-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10"></div>
       <div className="absolute top-1/2 right-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
       <div className="text-center">
@@ -71,7 +82,7 @@ const FloatingPhones = () => {
               muted
               className="rounded-xl w-full h-full object-cover"
             />
-            <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
+            <div className="absolute top-2 w-3 h-3 bg-black rounded-full"></div>
           </div>
         ))}
       </motion.div>
@@ -93,7 +104,7 @@ const FloatingPhones = () => {
               muted
               className="rounded-xl w-full h-full object-cover"
             />
-            <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
+            <div className="absolute top-2 w-3 h-3 bg-black rounded-full"></div>
           </div>
         ))}
       </motion.div>
@@ -114,7 +125,7 @@ const FloatingPhones = () => {
               muted
               className="rounded-xl w-full h-full object-cover"
             />
-            <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
+            <div className="absolute top-2 w-3 h-3 bg-black rounded-full"></div>
           </div>
         ))}
       </motion.div>
@@ -135,7 +146,7 @@ const FloatingPhones = () => {
               muted
               className="rounded-xl w-full h-full object-cover"
             />
-            <div className="absolute top-2 w-5 h-5 bg-black rounded-full"></div>
+            <div className="absolute top-2 w-3 h-3 bg-black rounded-full"></div>
           </div>
         ))}
       </motion.div>
