@@ -1,11 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const FloatingPhones = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Map scroll progress to scale and y-position
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [-30, 0]);
+
   const mockupData = [
     { src: "/videos/video1.mp4", x: -400, y: -80, rotate: -10 },
     { src: "/videos/video2.mp4", x: 400, y: -90, rotate: 10 },
@@ -50,7 +61,13 @@ const FloatingPhones = () => {
   }, []);
 
   return (
-    <div data-aos="fade-up" className="relative pt-12">
+    <motion.div
+      ref={ref}
+      style={{
+        scale,
+        y: translateY,
+      }}
+      className="relative ">
       <div className="absolute top-1/3 left-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10"></div>
       <div className="absolute top-1/2 right-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
       <div className="text-center">
@@ -150,7 +167,7 @@ const FloatingPhones = () => {
           </div>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
