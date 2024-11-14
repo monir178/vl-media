@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -43,4 +45,13 @@ body {
 * {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Custom styles for specific elements */
+.outlined-text {
+  font-family: "Poppins", sans-serif;
+
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 2px;
 }

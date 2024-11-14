@@ -54,7 +54,7 @@ const cardVariants = {
 
 const TestimonialCards = () => {
   return (
-    <MaxWidthWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 ">
+    <MaxWidthWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ">
       {testimonials.map((testimonial, index) => (
         <motion.div
           variants={cardVariants}
@@ -119,7 +119,7 @@ const TestimonialCards = () => {
                 &apos;{testimonial.quote}&apos;
               </blockquote>
             </div>
-            <div className="flex justify-between p-6 items-center">
+            <div className="flex gap-4 flex-col xl:flex-row  justify-between  p-6 items-center ">
               <div>
                 {" "}
                 <p className="font-bold">{testimonial.name}</p>
@@ -127,7 +127,7 @@ const TestimonialCards = () => {
                   {testimonial.occupation}
                 </p>
               </div>
-              <p className="text-sm text-gray-300 border border-white/30 rounded-2xl py-1 px-3 font-bold">
+              <p className="text-sm text-gray-300 border border-white/30 rounded-2xl py-1  px-3 font-bold">
                 {testimonial.community}
               </p>
             </div>

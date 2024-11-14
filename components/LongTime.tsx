@@ -2,20 +2,28 @@
 import { ReactLenis } from "lenis/react";
 import Image from "next/image";
 import MaxWidthWrapper from "./ui/Shared/MaxWidthWrapper";
+import BlurIn from "./ui/blur-in";
 export default function LongTime() {
   return (
     <MaxWidthWrapper className="py-20 ">
       <ReactLenis root>
         <section className="text-white   w-full ">
-          <div className="grid grid-cols-1 xl:grid-cols-2 2xl:gap-20">
-            <div className="sticky top-0 h-screen flex items-center justify-center -z-10">
-              <Image
-                src="/person.png"
-                alt=""
-                fill
-                className="overflow-visible py-44  object-cover opacity-40 xl:opacity-100"
-              />
+          <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-6 2xl:gap-20 ">
+            <div className="sticky top-0 h-screen flex items-center justify-center -z-10 ">
+              <div className="">
+                <Image
+                  src="/person.png"
+                  alt=""
+                  fill
+                  className="overflow-visible py-44  object-cover opacity-40 xl:opacity-100"
+                />
+                <BlurIn
+                  word="I've Been Doing This A Long Time"
+                  className="absolute  bottom-10 left-0 uppercase opacity-40 text-6xl hidden xl:block"
+                />
+              </div>
             </div>
+
             <div className="grid space-y-10 xl:py-80 ">
               {/* here todo text */}
               <h1 className=" text-xl md:text-2xl font-semibold lg:text-3xl">
