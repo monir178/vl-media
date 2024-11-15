@@ -6,7 +6,7 @@ interface CustomHeadingProps {
 }
 
 const CustomHeading = ({ text, className }: CustomHeadingProps) => (
-  <h1 className={cn("outlined-text", className)}>{text}</h1>
+  <p className={cn("outlined-text", className)}>{text}</p>
 );
 
 export default CustomHeading;

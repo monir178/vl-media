@@ -54,7 +54,7 @@ const cardVariants = {
 
 const TestimonialCards = () => {
   return (
-    <MaxWidthWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ">
+    <MaxWidthWrapper className="grid grid-cols-1 pb-12 md:pb-32 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ">
       {testimonials.map((testimonial, index) => (
         <motion.div
           variants={cardVariants}

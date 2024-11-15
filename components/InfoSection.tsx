@@ -4,23 +4,24 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import MaxWidthWrapper from "./ui/Shared/MaxWidthWrapper";
 import CustomHeading from "./ui/CustomHeading";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const InfoSection = () => {
   const notForYouRef = useRef(null);
   const forYouRef = useRef(null);
+  const isMediumOrLarger = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className=" text-white p-6 md:p-12">
-      <MaxWidthWrapper className="flex flex-col md:flex-row gap-8 md:gap-12 ">
+    <div className="text-white p-6 md:p-12">
+      <MaxWidthWrapper className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* This is Not for You Section */}
         <motion.div
           ref={notForYouRef}
           className="flex-1 space-y-6"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }} // Animation triggers when 20% of element is visible
-        >
+          initial={isMediumOrLarger ? { opacity: 0, x: -50 } : {}} // animation only on md+
+          animate={isMediumOrLarger ? { opacity: 1, x: 0 } : {}}
+          transition={isMediumOrLarger ? { duration: 0.5 } : {}}
+          viewport={isMediumOrLarger ? { amount: 0.2 } : {}}>
           <CustomHeading
             text="THIS IS NOT FOR YOU IF YOU..."
             className="text-3xl md:text-5xl 2xl:text-6xl text-gray-800"
@@ -49,14 +50,13 @@ const InfoSection = () => {
         <motion.div
           ref={forYouRef}
           className="flex-1 space-y-6"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }} // Animation triggers when 20% of element is visible
-        >
-          <h2 className="text-3xl md:text-5xl 2xl:text-6xl font-bold text-[#81ae37]">
+          initial={isMediumOrLarger ? { opacity: 0, x: 50 } : {}} // animation only on md+
+          animate={isMediumOrLarger ? { opacity: 1, x: 0 } : {}}
+          transition={isMediumOrLarger ? { duration: 0.5 } : {}}
+          viewport={isMediumOrLarger ? { amount: 0.2 } : {}}>
+          <h1 className="text-3xl md:text-5xl 2xl:text-6xl font-bold text-[#81ae37]">
             THIS IS FOR YOU IF YOU...
-          </h2>
+          </h1>
           <ul className="space-y-4">
             {[
               "Are tired of being stuck in a loop of surface-level advice, buying course after course...",

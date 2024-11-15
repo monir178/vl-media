@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import FAQSection from "@/components/FAQSection";
 import FloatingPhones from "@/components/FloatingPhones";
+import HowItWorksSection from "@/components/HowItWorks";
 import InfoSection from "@/components/InfoSection";
 import LongTime from "@/components/LongTime";
 import TestimonialCards from "@/components/TertimonialCards";
@@ -8,7 +9,7 @@ import { Testimonial } from "@/components/Testimonial";
 
 export default function Home() {
   return (
-    <div className="space-y-12 pb-20">
+    <div>
       <Banner />
       <FloatingPhones />
       <LongTime />
@@ -16,6 +17,7 @@ export default function Home() {
       <TestimonialCards />
       <InfoSection />
       <FAQSection />
+      <HowItWorksSection />
     </div>
   );
 }

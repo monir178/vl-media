@@ -40,7 +40,7 @@ export function Testimonial() {
     },
   ];
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className="pb-12 pt-12 xl:pt-32 md:pb-24">
       <AnimatedTestimonials testimonials={testimonials} />
     </MaxWidthWrapper>
   );
