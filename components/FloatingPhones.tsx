@@ -43,7 +43,7 @@ const FloatingPhones = () => {
 
   const floatVariants = {
     animate: {
-      y: [0, -12, 0],
+      y: [0, -18, 0],
       transition: {
         duration: 3,
         ease: "easeInOut",
