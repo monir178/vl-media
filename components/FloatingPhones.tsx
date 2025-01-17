@@ -97,7 +97,7 @@ const FloatingPhones = () => {
               autoPlay
               loop
               muted
-              className="rounded-xl w-full h-full object-cover"
+              className="rounded-xl w-full h-full object-cover brightness-125"
             />
             <div className="absolute top-2 w-3 h-3 bg-black rounded-full"></div>
           </div>

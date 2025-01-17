@@ -13,6 +13,8 @@ const InfoSection = () => {
 
   return (
     <div className="text-white p-6 md:p-12">
+
+    
       <MaxWidthWrapper className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* This is Not for You Section */}
         <motion.div

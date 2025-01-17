@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import FAQSection from "@/components/FAQSection";
 import FloatingPhones from "@/components/FloatingPhones";
+import Footer from "@/components/Footer";
 import HowItWorksSection from "@/components/HowItWorks";
 import InfoSection from "@/components/InfoSection";
 import LongTime from "@/components/LongTime";
@@ -20,6 +21,7 @@ export default function Home() {
       <PersonalBrand />
       <FAQSection />
       <HowItWorksSection />
+      <Footer/>
     </div>
   );
 }

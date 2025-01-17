@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="w-full  h-screen xl:h-full flex items-center  pt-20 md:pt-32  pb-8 z-10">
+    <div id="/" className="w-full  h-screen xl:h-full flex items-center  pt-20 md:pt-32  pb-8 z-10">
       {/* <div className="absolute top-1/3 left-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10"></div>
       <div className="absolute top-1/2 right-0 w-[500px] 2xl:w-[600px] h-[200px] 2xl:h-[400px] bg-blue-500 opacity-20 blur-3xl -z-10 rounded-full pointer-events-none"></div> */}
 

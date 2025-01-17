@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const HowItWorksSection = () => {
   return (
-    <div className="bg-[#0a0f26]  w-full">
+    <div id="services" className="bg-[#0a0f26]  w-full">
       <MaxWidthWrapper className="py-12  flex flex-col gap-12">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-sans">
             What You Get
           </h2>
           <p className="text-center text-sm text-[#8a8fac] mb-10">
