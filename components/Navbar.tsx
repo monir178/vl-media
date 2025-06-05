@@ -12,19 +12,17 @@ const links = [
 const Navbar = () => {
   return (
     <div className="fixed z-[50] top-6 w-full mx-auto flex justify-center items-center ">
-      <ul className="flex flex-wrap gap-4 px-5 sm:px-6 md:px-8 lg:px-12 py-3 lg:py-4 rounded-full text-purple-400 shadow-lg backdrop-blur-md border border-purple-600 ">
+      <ul className="flex flex-wrap gap-4 px-5 sm:px-6 md:px-8 lg:px-12 py-3 lg:py-4 rounded-full  shadow-lg backdrop-blur-md border border-violet-600 ">
         {links.map((link) => (
           <li
-            className="cursor-pointer hover:text-violet-400 font-semibold "
-            key={link.name}
-          >
+            className="cursor-pointer text-transparent bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text duration-200 transition-all hover:text-violet-400 font-semibold "
+            key={link.name}>
             <ScrollLink
               to={link.target}
               smooth={true}
               offset={-100}
               duration={500}
-              className="text-sm sm:text-base md:text-lg lg:text-xl"
-            >
+              className="text-sm sm:text-base md:text-lg lg:text-xl">
               {link.name}
             </ScrollLink>
           </li>
